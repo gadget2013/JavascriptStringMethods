@@ -1,0 +1,160 @@
+<html>
+    <head>
+        <title>JavaScript String Methods</title>
+    </head>
+    <body>
+        <script>
+        // String Length
+        var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        var sln =  txt.length;
+        console.log(sln)
+
+        // Finding a String in a String
+        var str = "Please locate where 'locate' occurs!";
+        var pos1 = str.indexOf("locate");
+        console.log(pos1)
+
+        var str = "Please locate where 'locate' occurs!";
+        var pos2 = str.lastIndexOf("locate");
+        console.log(pos2)
+
+        var str = "Please locate where 'locate' occurs!";
+        var pos3 = str.lastIndexOf("John");
+        console.log(pos3)
+
+        var str = "Please locate where 'locate' occurs!";
+        var pos4 = str.indexOf("locate", 15);
+        console.log(pos4)
+
+        var str = "Please locate where 'locate' occurs!";
+        var pos5 = str.lastIndexOf("locate", 15);
+        console.log(pos5)
+
+        // Searching for a String in a String
+        var str = "Please locate where 'locate' occurs!";
+        var pos6 = str.search("locate");
+        console.log(pos6)
+
+        // slice() Method
+        var str1 = "Apple, Banana, Kiwi";
+        var res1 = str1.slice(7,13);
+        console.log(res1)
+
+        var str1 = "Apple, Banana, Kiwi";
+        var res2 = str1.slice(-12, -6);
+        console.log(res2)
+
+        var res3 =  str1.slice(7);
+        console.log(res3)
+
+        var res4 = str1.slice(-12);
+        console.log(res4)
+
+        // substring() Method
+        var str1 = "Apple, Banana, Kiwi";
+        var res5 = str1.substring(7, 13);
+
+        // substr() method
+        var str1 = "Apple, Banana, Kiwi";
+        var res6 = str1.substr(7,6);
+        console.log(res6)
+
+        var str1 = "Apple, Banana, Kiwi";
+        var res7 = str1.substr(7);
+        console.log(7)
+
+        var str1 = "Apple, Banana, Kiwi";
+        var res8 = str1.substr(-4);
+        console.log(-4)
+
+        // Replacing String Method
+        str2 = "Please visit Apple!";
+        var n1 = str2.replace("Apple", "Microsoft");
+        console.log(n1)
+
+        str2 = "Please visit Apple and Apple!";
+        var n2 = str2.replace("Apple", "Google");
+        console.log(n2)
+
+        str2 =  "Please visit Apple!";
+        var n3 = str2.replace("APPLE", "Google");
+        console.log(n3)
+
+        str2 = "Please visit Apple!";
+        var n4 = str2.replace(/APPLE/i, "Google");
+        console.log(n4)
+
+        str2 = "Please visit Apple and Apple";
+        var n5 = str2.replace(/Apple/g, "Google");
+        console.log(n5)
+
+        // Converting to Upper and Lower Case
+        var text1 = "Hello World!";
+        var text2 = text1.toUpperCase();
+        console.log(text2)
+
+        var text1 = "Hello World!";
+        var text2 = text1.toLowerCase();
+        console.log(text2)
+
+        // concat() Method
+        var text1 = "Hello";
+        var text2 = "World";
+        var text3 = text1.concat(" ", text2);
+        console.log(text3)
+
+        var text4 = "Hello" + " " + "World!";
+        var text5 = "Hello".concat(" ", "World!");
+        console.log(text5)
+
+        // string.trim()
+        var str3= "     Hello World!        ";
+        alert(str3.trim())
+
+        var str3 = "     Hello World!        ";
+        alert(str3.replce(/^[\s\uFEFF\xA0]+[\s\uFEFF\xA0]+$/g, ''))
+
+
+
+        if (!String.prototype.trim) {
+            String.prototype.trim = function () {
+                return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
+            };
+        }
+        var str3 = "       Hello World!        ";
+        alert(str3.trim())
+
+        // extracting string characters
+        // charAt() Method
+        var str4 = "HELLO WORLD";
+        str4.charAt(0)
+
+        // charCodeAt() Method
+        var str4 = "HELLO WORLD";
+        str4.charCodeAt(0)
+
+        // property access
+        var str4 = "HELLO WORLD";
+        str4[0]
+
+        var str4 = "HELLO WORLD";
+        str4[0] = "A";
+        str4[0]
+
+        // converting a string to an array
+        var txt6 = "a,b,c,d,e";
+        txt6.split(",")
+        txt6.split(" ")
+        txt6.split("|")
+
+        var txt7 = "Hello";
+        txt7.split("";)
+
+        var txt7 = "Hello";
+        txt7.split("")
+
+        var txt8 = "I can eat bananas all day";
+        var x = txt.slice(10,17)
+        </script>
+    </body>
+</html>
